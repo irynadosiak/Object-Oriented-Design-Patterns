@@ -20,3 +20,6 @@ Results of tasks from the course "Object-Oriented Design Patterns" on the Course
 
 ## Task for chain_of_responsibility.py
 Вам дан объект класса SomeObject, содержащего три поля: integer_field, float_field и string_field. Необходимо реализовать поведение: EventGet - создаёт событие получения данных, EventSet - создаёт событие изменения поля. Необходимо реализовать классы NullHandler, IntHandler, FloatHandler, StrHandler так, чтобы можно было создать цепочку.
+
+## Task for abstract_factory.py
+Вам даны шесть классов: EasyMap, EasyObjects, MediumMap, MediumObjects, HardMap, HardObjects. Каждый из классов генерирует карту и список объектов для неё. На их основе Вам необходимо создать абстрактную фабрику AbstractLevel c классовыми методами get_map() и get_objects(). Её реализации должны носить имена EasyLevel, MediumLevel и HardLevel.
