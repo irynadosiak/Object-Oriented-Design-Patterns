@@ -2,7 +2,7 @@ from abc import ABCMeta
 
 
 # Abstract Factory
-class StandardFactory(object):
+class StandardFactory():
 
     @staticmethod
     def get_factory(country):
@@ -14,18 +14,18 @@ class StandardFactory(object):
 
 
 # Factory
-class UkraineFactory(object):
+class UkraineFactory():
     def get_site(self):
         return Grammarly()
 
 
-class USAFactory(object):
+class USAFactory():
     def get_site(self):
         return Amazon()
 
 
 # Product Interface
-class Website(object):
+class Website():
     __metaclass__ = ABCMeta
 
     def achievement(self):
@@ -33,12 +33,12 @@ class Website(object):
 
 
 # Products
-class Grammarly(object):
+class Grammarly():
     def achievement(self):
         print('Grammarly is Ukrainian site!')
 
 
-class Amazon(object):
+class Amazon():
     def achievement(self):
         print('Amazon is USA site!')
 
