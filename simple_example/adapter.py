@@ -1,29 +1,38 @@
-class Ukrainian(object):
-    def __init__(self, name):
-        self._name = name
+class Regions():
+    def __init__(self, country):
+        self._country = country
 
-    def greeting(self):
-        return '%s: Привіт!' % self._name
-
-
-class American(object):
-    def __init__(self, name):
-        self._name = name
-
-    def live_in(self):
-        return '%s: I live in America' % self._name
+    def get_regions(self):
+        return '%s has 25 regions!' % self._country
 
 
-class AmericanAdapter(Ukrainian):
-    def __init__(self, name):
-        super(AmericanAdapter, self).__init__(name=name)
-        self._american = American(name=name)
+class States():
+    def __init__(self, country):
+        self._country = country
 
-    def greeting(self):
-        return self._american.live_in()
+    def get_states(self):
+        return '%s: has 50 states' % self._country
 
 
-person = Ukrainian('Ivan')
-print(person.greeting())
-person = AmericanAdapter('Joe')
-print(person.greeting())
+class USAAdapter(Regions):
+    def __init__(self, country):
+        super(USAAdapter, self).__init__(country=country)
+        self._states = States(country=country)
+
+    def get_regions(self):
+        return self._states.get_states()
+
+
+class UkraineAdapter(States):
+    def __init__(self, country):
+        super(UkraineAdapter, self).__init__(country=country)
+        self._regions = Regions(country=country)
+
+    def get_states(self):
+        return self._regions.get_regions()
+
+
+person = UkraineAdapter('Ukraine')
+print(person.get_states())
+person = USAAdapter('USA')
+print(person.get_regions())
