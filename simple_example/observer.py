@@ -24,8 +24,9 @@ class Subject():
 
 
 class ObserverBase():
+    @staticmethod
     def update(self, data):
-        raise NotImplementedError()
+        pass
 
 
 class Observer(ObserverBase):
@@ -33,10 +34,10 @@ class Observer(ObserverBase):
         self._name = name
 
     def update(self, data):
-        print('%s: %s' % (self._name, data))
+        print('To %s: %s' % (self._name, data))
 
 
 subject = Subject()
-subject.attach(Observer('Ukrainian'))
-subject.attach(Observer('American'))
-subject.set_data('Hello everybody!')
+subject.attach(Observer('Ivan'))
+subject.attach(Observer('David'))
+subject.set_data('Good morning! You will receive a message twice a week.')
