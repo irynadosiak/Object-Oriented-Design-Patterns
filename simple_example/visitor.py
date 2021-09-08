@@ -1,4 +1,4 @@
-class PersonVisitor(object):
+class PersonVisitor():
     def say(self, person):
         methods = {
             Ukrainian: self.say_ukrainian,
@@ -14,7 +14,7 @@ class PersonVisitor(object):
         print('Hello!')
 
 
-class Person(object):
+class Person():
     "Person"
 
     def say(self, visitor):
