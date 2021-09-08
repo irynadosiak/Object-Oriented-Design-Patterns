@@ -1,11 +1,10 @@
 class People():
+    @staticmethod
     def factory(type):
         if type == "Ukrainian":
             return Ukrainian()
         if type == "American":
             return American()
-
-    factory = staticmethod(factory)
 
 
 class Ukrainian(People):
