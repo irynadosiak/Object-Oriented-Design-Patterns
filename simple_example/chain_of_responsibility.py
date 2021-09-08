@@ -1,16 +1,16 @@
-class LanguageFormat(object):
+class LanguageFormat():
     Ukraine = 0
     USA = 1
 
 
-class Report(object):
+class Report():
     def __init__(self, format_):
         self.title_ukr = 'Привіт!'
         self.title_usa = 'Hello!'
         self.format_ = format_
 
 
-class Handler(object):
+class Handler():
     def __init__(self):
         self.nextHandler = None
 
