@@ -5,12 +5,12 @@ class PersonVisitor():
         }
 
         say = methods.get(type(person), self.say_unknown)
-        say(person)
+        say()
 
-    def say_ukrainian(self, person):
+    def say_ukrainian(self):
         print('Привіт!')
 
-    def say_unknown(self, person):
+    def say_unknown(self):
         print('Hello!')
 
 
