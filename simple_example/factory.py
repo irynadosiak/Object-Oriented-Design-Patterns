@@ -1,4 +1,4 @@
-class People(object):
+class People():
     def factory(type):
         if type == "Ukrainian":
             return Ukrainian()
