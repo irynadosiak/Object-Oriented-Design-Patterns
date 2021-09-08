@@ -1,4 +1,4 @@
-class Person(object):
+class Person():
     def __init__(self, name):
         self._name = name
 
@@ -6,7 +6,7 @@ class Person(object):
         print('Привіт! Я %s!' % self._name)
 
 
-class Ukrainian(object):
+class Ukrainian():
     def __init__(self, man):
         self._person = person
 
@@ -21,4 +21,3 @@ person = Person('Іван')
 person_ukrainian = Ukrainian(person)
 person_ukrainian.say()
 person_ukrainian.go_to()
-
