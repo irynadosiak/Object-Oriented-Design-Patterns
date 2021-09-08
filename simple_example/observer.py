@@ -1,4 +1,4 @@
-class Subject(object):
+class Subject():
     def __init__(self):
         self._data = None
         self._observers = set()
@@ -23,7 +23,7 @@ class Subject(object):
             observer.update(data)
 
 
-class ObserverBase(object):
+class ObserverBase():
     def update(self, data):
         raise NotImplementedError()
 
